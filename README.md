@@ -25,21 +25,20 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] The game asks the user to guess a secret number. It gives a hint after each guess and keeps track of the score.
+- [x] I found that the secret number changed when the Submit button was clicked, so it was hard to win. The Higher and Lower hints were also incorrect.
+- [x] I stored the secret number and other game values in Streamlit session state. I moved the guessing rules into `logic_utils.py` and added tests to make sure the guesses, hints, attempts, and score work correctly.
 
-## 📸 Demo Walkthrough
+## Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
+This sample uses Normal difficulty with a secret number of 50:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
-
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+1. The user enters a guess of 40.
+2. The game returns `Too Low` and updates the score after the first attempt.
+3. The user enters a guess of 70.
+4. The game returns `Too High` and updates the score after the second attempt.
+5. The user enters a guess of 50.
+6. The game returns `Win`, displays the final score, and ends the game.
 
 ## 🧪 Test Results
 
